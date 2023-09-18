@@ -486,8 +486,22 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 
 //CODE HERE
 
+function assendArray(sampleArray) {
+  let bool = true
+  let arrayIsAscending = -Infinity;
+  for (i = 0; i < sampleArray.length; i++) {
+    if (sampleArray[i] > arrayIsAscending) {
+      bool = true;
+      arrayIsAscending = sampleArray[i];
+    }
+    else {
+      bool = false;
+      return bool;
+    }
+  } return bool;
+}
 
-
+console.log(assendArray(sampleArray));
 
 
 
@@ -495,6 +509,8 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 ////////////////// PROBLEM 22 ////////////////////
 
 let duck = "cute";
+
+
 
 function bathroom() {
   let rubberDuck = "squeaky";
@@ -516,11 +532,18 @@ function pond() {
 //This array should contain the variable names (as strings) accessible in the global scope.
 let globalScope = []
 
+
 //This array should contain the variable names (as strings) accessible in the bathroom function.
 let bathroomScope = []
+
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
 let bathtubScope = []
 
+
 //This array should contain the variable names (as strings) accessible in the pond function.
 let pondScope = []
+
+
+
+
